@@ -1,0 +1,99 @@
+/* Estilos para os Snackbars */
+.success-snackbar {
+  background: #4caf50;
+  color: white;
+}
+
+.error-snackbar {
+  background: #f44336;
+  color: white;
+}
+
+.warning-snackbar {
+  background: #ff9800;
+  color: white;
+}
+
+.info-snackbar {
+  background: #2196f3;
+  color: white;
+}
+
+/* Estilos de Loading */
+.loading-backdrop {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Melhorias de Acessibilidade */
+:focus {
+  outline: 2px solid #2196f3;
+  outline-offset: 2px;
+}
+
+[role="button"],
+button {
+  cursor: pointer;
+}
+
+/* Contrastes e Legibilidade */
+.high-contrast {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.readable-text {
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+}
+
+/* Animações Suaves */
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+.slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none;
+  }
+  
+  .mobile-padding {
+    padding: 10px;
+  }
+}
+
+/* Utilidades */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

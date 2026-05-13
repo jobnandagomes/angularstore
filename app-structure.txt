@@ -1,0 +1,124 @@
+# Estrutura e Estado Atual - Tech Store
+
+## 1. Visão Geral da Aplicação
+
+A Tech Store é uma plataforma de cursos online desenvolvida em Angular 17, utilizando Material UI e seguindo as melhores práticas de desenvolvimento moderno. A aplicação implementa um sistema completo de e-commerce educacional com autenticação, catálogo de cursos e carrinho de compras.
+
+## 2. Estrutura de Diretórios
+
+### 2.1 Core (/src/app/core)
+- **guards/**
+  - `auth.guard.ts` - Proteção de rotas autenticadas
+  - `admin.guard.ts` - Proteção de rotas administrativas
+- **services/**
+  - `auth.service.ts` - Gerenciamento de autenticação
+- **models/**
+  - `user.model.ts` - Interface de usuário
+- **core.module.ts** - Módulo singleton com serviços globais
+
+### 2.2 Features (/src/app/features)
+- **auth/**
+  - Componentes de login e registro
+  - Gerenciamento de estado de autenticação
+- **courses/**
+  - `courses.component.ts` - Listagem de cursos
+  - `course-details.component.ts` - Detalhes do curso
+  - `courses.module.ts` - Módulo lazy-loaded
+- **cart/**
+  - Funcionalidades do carrinho de compras
+  - Integração com NgRx
+
+### 2.3 Shared (/src/app/shared)
+- **shared.module.ts**
+  - Componentes e módulos Material UI
+  - Diretivas e pipes compartilhados
+
+## 3. Estado Atual das Funcionalidades
+
+### 3.1 Autenticação
+- ✅ Login/Registro implementados
+- ✅ Guards de rota funcionando
+- ✅ Persistência de sessão
+- ⚠️ Refresh token pendente
+- ⚠️ Recuperação de senha pendente
+
+### 3.2 Catálogo de Cursos
+- ✅ Listagem de cursos
+- ✅ Detalhes do curso
+- ✅ Filtragem por categoria
+- ⚠️ Sistema de busca avançada pendente
+- ⚠️ Paginação pendente
+
+### 3.3 Carrinho de Compras
+- ✅ Adição/remoção de itens
+- ✅ Cálculo de total
+- ⚠️ Checkout pendente
+- ⚠️ Integração com pagamento pendente
+
+## 4. Arquivos de Configuração
+
+### 4.1 Angular
+- **angular.json**
+  - Configurações de build
+  - Estilos globais
+  - Assets e scripts
+
+### 4.2 Backend Mock
+- **mock-server/db.json**
+  - Dados mockados
+  - Endpoints simulados
+- **mock-server/routes.json**
+  - Mapeamento de rotas da API
+- **mock-server/middleware.js**
+  - Lógica de autenticação
+  - Interceptação de requisições
+
+## 5. Dependências Principais
+
+- **@angular/material** - v17.0.0
+- **@ngrx/store** - v17.0.0
+- **@ngrx/effects** - v17.0.0
+- **rxjs** - ~7.8.0
+- **json-server** - ^0.17.4
+
+## 6. Scripts Disponíveis
+
+- `npm start` - Inicia a aplicação
+- `npm run server` - Inicia o mock server
+- `npm test` - Executa testes unitários
+- `npm run e2e` - Executa testes e2e
+- `npm run build` - Build de produção
+
+## 7. Estado dos Testes
+
+### 7.1 Testes Unitários
+- ✅ Guards implementados
+- ✅ Serviços principais
+- ⚠️ Componentes pendentes
+- ⚠️ Reducers pendentes
+
+### 7.2 Testes E2E
+- ✅ Fluxo de registro
+- ✅ Fluxo de login
+- ⚠️ Fluxo de compra pendente
+- ⚠️ Fluxo administrativo pendente
+
+## 8. Pontos de Atenção
+
+1. Necessidade de implementar interceptors para tratamento de erros
+2. Melhorar cobertura de testes
+3. Implementar sistema de cache
+4. Otimizar carregamento de imagens
+5. Implementar sistema de logs
+
+## 9. Próximas Implementações Técnicas
+
+1. Implementar refresh token
+2. Adicionar interceptor de erro global
+3. Configurar PWA
+4. Implementar sistema de cache
+5. Adicionar compressão de assets
+
+---
+
+Este documento deve ser atualizado conforme novas features são implementadas ou modificações significativas são realizadas na estrutura da aplicação. 
